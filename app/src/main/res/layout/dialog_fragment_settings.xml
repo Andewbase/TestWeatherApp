@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screen.settings.dialog.SettingsDialog">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/back_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ed_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:theme="@style/EditTextThemeOverlay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="@string/add_name_city"
+        android:textColorHint="@color/royal_fuchsia"
+        app:helperText="@string/add_name_city"
+        app:helperTextTextAppearance="@style/HelperTextAppearance"
+        app:boxStrokeColor="@color/royal_fuchsia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColorHighlight="@color/royal_fuchsia" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        style="@style/Widget.TestWeather.TextView"
+        android:id="@+id/tv_type_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/type_city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_layout" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_type_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type_city">
+
+        <RadioButton
+            style="@style/Widget.TestWeather.CompoundButton.RadioButton"
+            android:id="@+id/type_city_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/small" />
+
+        <RadioButton
+            style="@style/Widget.TestWeather.CompoundButton.RadioButton"
+            android:id="@+id/type_city_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/medium" />
+
+        <RadioButton
+            style="@style/Widget.TestWeather.CompoundButton.RadioButton"
+            android:id="@+id/type_city_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/large" />
+
+    </RadioGroup>
+
+    <TextView
+        style="@style/Widget.TestWeather.TextView"
+        android:id="@+id/tv_season"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/season"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_type_city" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_season_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_season">
+
+        <RadioButton
+            android:id="@+id/spring_season_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/spring_color"
+            android:text="@string/spring"/>
+
+        <RadioButton
+            android:id="@+id/summer_season_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/summer_color"
+            android:text="@string/summer" />
+
+        <RadioButton
+            android:id="@+id/autumn_season_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/autumn_color"
+            android:text="@string/autumn" />
+
+        <RadioButton
+            android:id="@+id/winter_season_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/winter_color"
+            android:text="@string/winter" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/liner_months"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_season_settings">
+
+        <LinearLayout
+            android:id="@+id/liner_moth_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:id="@+id/tv_moths_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Март"/>
+
+            <EditText
+                android:id="@+id/edit_moths_one"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLength="3"
+                tools:text="+25"
+                android:minHeight="48dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/liner_moth_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:id="@+id/tv_moths_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Апрель"/>
+
+            <EditText
+                android:id="@+id/edit_moths_two"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLength="3"
+                android:minHeight="48dp"
+                tools:text="+25"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/liner_moth_thre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:id="@+id/tv_moths_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                tools:text="Май"/>
+
+            <EditText
+                android:id="@+id/edit_moths_three"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLength="3"
+                android:minHeight="48dp"
+                tools:text="+25" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.TestWeather.CompoundButton.Button"
+        android:id="@+id/btn_to_change_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        app:cornerRadius="@dimen/margin_20"
+        android:text="@string/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liner_months" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

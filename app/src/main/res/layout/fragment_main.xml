@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screen.main.MainFragment">
+
+    <RadioGroup
+        android:id="@+id/radioGroupCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            style="@style/Widget.TestWeather.CompoundButton.RadioButton"
+            android:id="@+id/one_city_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            tools:text="Москва"/>
+
+        <RadioButton
+            style="@style/Widget.TestWeather.CompoundButton.RadioButton"
+            android:id="@+id/two_city_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            tools:text="Хабаровск"/>
+
+        <RadioButton
+            style="@style/Widget.TestWeather.CompoundButton.RadioButton"
+            android:id="@+id/three_city_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            tools:text="@string/the_city_has_not_been"/>
+
+        <RadioButton
+            style="@style/Widget.TestWeather.CompoundButton.RadioButton"
+            android:id="@+id/four_city_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            tools:text="@string/the_city_has_not_been"/>
+
+    </RadioGroup>
+
+    <TextView
+        style="@style/Widget.TestWeather.TextView"
+        android:id="@+id/tv_type_of_season"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/type_of_season"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupCity" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_type_of_season"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type_of_season">
+
+        <RadioButton
+            android:id="@+id/spring_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:buttonTint="@color/spring_color"
+            android:text="@string/spring_1" />
+
+        <RadioButton
+            android:id="@+id/summer_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/summer_color"
+            android:text="@string/summer" />
+
+        <RadioButton
+            android:id="@+id/autumn_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/autumn_color"
+            android:text="@string/autumn" />
+
+        <RadioButton
+            android:id="@+id/winter_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/winter_color"
+            android:text="@string/winter_1" />
+    </RadioGroup>
+
+    <TextView
+        style="@style/Widget.TestWeather.TextView"
+        android:id="@+id/tv_type_of_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/type_of_temperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_type_of_season" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_type_of_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type_of_temperature">
+
+        <RadioButton
+            android:id="@+id/celsius_type_of_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:buttonTint="@color/celsius_color"
+            android:text="@string/celsius" />
+
+        <RadioButton
+            android:id="@+id/kelvin_type_of_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/kelvin_color"
+            android:text="@string/kelvin" />
+
+        <RadioButton
+            android:id="@+id/fahrenheit_type_of_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/fahrenheit_color"
+            android:text="@string/fahrenheit" />
+
+    </RadioGroup>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_type_of_temperature">
+
+        <TableRow
+            android:id="@+id/city_country">
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:text="@string/city" />
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:id="@+id/name_city_value"
+                tools:text="Хабаровск" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/type_city_country"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:text="@string/type_city" />
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:id="@+id/type_city_value"
+                tools:text="Средний" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/type_season_size"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:text="@string/season" />
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:id="@+id/type_season_value"
+                tools:text="Весна" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/temperature_per_season_country"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:text="@string/temperature_per_season" />
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:id="@+id/temperature_per_season_value"
+                android:layout_marginStart="10dp"
+                tools:text="+25" />
+        </TableRow>
+
+    </TableLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.TestWeather.CompoundButton.Button"
+        android:id="@+id/goSettings"
+        app:cornerRadius="@dimen/margin_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

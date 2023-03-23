@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="@dimen/margin_20"
+    android:background="@drawable/style_layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow android:id="@+id/city_country">
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:text="@string/city" />
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:id="@+id/name_city_value"
+                android:gravity="center"
+                tools:text="Хабаровск"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/type_city_country"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:text="@string/type_city" />
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:id="@+id/type_city_value"
+                android:gravity="center"
+                tools:text="Средний"/>
+        </TableRow>
+
+        <TableRow android:id="@+id/type_season_size"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:text="@string/season_size" />
+
+            <TextView
+                style="@style/Widget.TestWeather.TextView"
+                android:id="@+id/type_season_size_value"
+                android:gravity="center"
+                tools:text="0"/>
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

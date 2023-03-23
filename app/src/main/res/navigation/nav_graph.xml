@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.testweather.screen.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.testweather.screen.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_settingsDialog"
+            app:destination="@id/settingsDialog" />
+        <action
+            android:id="@+id/action_settingsFragment_to_settingsToChangeDialog"
+            app:destination="@id/settingsToChangeDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/settingsDialog"
+        android:name="com.example.testweather.screen.settings.dialog.SettingsDialog"
+        android:label="dialog_fragment_settings"
+        tools:layout="@layout/dialog_fragment_settings" >
+        <action
+            android:id="@+id/action_settingsDialog_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/settingsToChangeDialog"
+        android:name="com.example.testweather.screen.settings.dialog.SettingsToChangeDialog"
+        android:label="SettingsToChangeDialog" >
+        <action
+            android:id="@+id/action_settingsToChangeDialog_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="nameCity"
+            app:argType="string" />
+    </dialog>
+</navigation>

@@ -1,0 +1,158 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "db3e6678b3db3b1166141c403c146b08",
+    "entities": [
+      {
+        "tableName": "city",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name_city` TEXT NOT NULL, `type_city` INTEGER NOT NULL, `timestamp` TEXT NOT NULL, PRIMARY KEY(`name_city`))",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name_city",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type_city",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "name_city"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "season",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name_season` TEXT NOT NULL, `name_month_one` TEXT NOT NULL, `name_month_two` TEXT NOT NULL, `name_month_three` TEXT NOT NULL, `temperature_month_one` REAL NOT NULL, `temperature_month_two` REAL NOT NULL, `temperature_month_three` REAL NOT NULL, PRIMARY KEY(`name_season`))",
+        "fields": [
+          {
+            "fieldPath": "name",
+            "columnName": "name_season",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameMonthOne",
+            "columnName": "name_month_one",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameMonthTwo",
+            "columnName": "name_month_two",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameMonthThree",
+            "columnName": "name_month_three",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "temperatureMonthOne",
+            "columnName": "temperature_month_one",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "temperatureMonthTwo",
+            "columnName": "temperature_month_two",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "temperatureMonthThree",
+            "columnName": "temperature_month_three",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "name_season"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "city_and_season",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`city_name` TEXT NOT NULL, `season_name` TEXT NOT NULL, `timestamp` TEXT NOT NULL, PRIMARY KEY(`city_name`, `season_name`), FOREIGN KEY(`city_name`) REFERENCES `city`(`name_city`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`season_name`) REFERENCES `season`(`name_season`) ON UPDATE CASCADE ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "cityName",
+            "columnName": "city_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "seasonName",
+            "columnName": "season_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "city_name",
+            "season_name"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": [
+          {
+            "table": "city",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "city_name"
+            ],
+            "referencedColumns": [
+              "name_city"
+            ]
+          },
+          {
+            "table": "season",
+            "onDelete": "NO ACTION",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "season_name"
+            ],
+            "referencedColumns": [
+              "name_season"
+            ]
+          }
+        ]
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'db3e6678b3db3b1166141c403c146b08')"
+    ]
+  }
+}

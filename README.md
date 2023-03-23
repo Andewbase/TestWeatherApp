@@ -1,6 +1,6 @@
 
 
-![] (https://github.com/Andewbase/TestWeatherApp/blob/master/weather_record.gif)
+![](https://github.com/Andewbase/TestWeatherApp/blob/master/weather_record.gif)
 
 Тестовое задание
 

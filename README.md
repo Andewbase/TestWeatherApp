@@ -1,3 +1,7 @@
+
+
+![] (https://github.com/Andewbase/TestWeatherApp/blob/master/weather_record.gif)
+
 Тестовое задание
 
 Задача: Создать приложение с 2 экранами.

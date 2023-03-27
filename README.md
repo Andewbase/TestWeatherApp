@@ -26,3 +26,14 @@
 
 Описание:
 TODO коментариями по проекту отмечено выполнение патернов.
+"Lazy singleton": https://github.com/Andewbase/TestWeatherApp/blob/master/app/src/main/java/com/example/testweather/di/AppModule.kt#L16
+
+"Strategy": https://github.com/Andewbase/TestWeatherApp/tree/master/app/src/main/java/com/example/testweather/util/tempstrategy
+
+"Factory": https://github.com/Andewbase/TestWeatherApp/blob/master/app/src/main/java/com/example/testweather/screen/main/MainFragment.kt#L81
+https://github.com/Andewbase/TestWeatherApp/tree/master/app/src/main/java/com/example/testweather/util/factory
+
+"Decorator":https://github.com/Andewbase/TestWeatherApp/blob/master/app/src/main/java/com/example/testweather/screen/main/MainFragment.kt#L82
+https://github.com/Andewbase/TestWeatherApp/tree/master/app/src/main/java/com/example/testweather/util/decorator
+
+"Observer": https://github.com/Andewbase/TestWeatherApp/blob/master/app/src/main/java/com/example/testweather/screen/main/MainFragment.kt#L75

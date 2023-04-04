@@ -42,7 +42,7 @@ class SettingsToChangeDialog: BaseDialogFragment<DialogFragmentSettingsBinding>(
             editMothsTwo.setRawInputType(numberType)
             editMothsThree.setRawInputType(numberType)
             editCity.isEnabled = false
-            edLayout.setHint(R.string.name_city)
+            addCityTextInput.setHint(R.string.name_city)
             btnToChangeWeather.text = CHANGE
         }
 

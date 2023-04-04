@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ed_layout"
+        android:id="@+id/addCityTextInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:theme="@style/EditTextThemeOverlay"
         android:layout_width="0dp"
@@ -55,7 +55,7 @@
         android:text="@string/type_city"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ed_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/addCityTextInput" />
 
     <RadioGroup
         android:id="@+id/radio_group_type_city"
@@ -160,20 +160,27 @@
             <TextView
                 style="@style/Widget.TestWeather.TextView"
                 android:id="@+id/tv_moths_one"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:textSize="18sp"
                 tools:text="Март"/>
 
-            <EditText
-                android:id="@+id/edit_moths_one"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:maxLength="3"
-                tools:text="+25"
-                android:minHeight="48dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mothsOneTextInput"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_moths_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    tools:text="+25"
+                    android:minHeight="48dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -191,15 +198,21 @@
                 android:textSize="18sp"
                 tools:text="Апрель"/>
 
-            <EditText
-                android:id="@+id/edit_moths_two"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:maxLength="3"
-                android:minHeight="48dp"
-                tools:text="+25"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mothsTwoTextInput"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_moths_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    tools:text="+25"
+                    android:minHeight="48dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -212,19 +225,27 @@
             <TextView
                 style="@style/Widget.TestWeather.TextView"
                 android:id="@+id/tv_moths_three"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:textSize="18sp"
                 tools:text="Май"/>
 
-            <EditText
-                android:id="@+id/edit_moths_three"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:maxLength="3"
-                android:minHeight="48dp"
-                tools:text="+25" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mothsThreTextInput"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_moths_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="3"
+                    tools:text="+25"
+                    android:minHeight="48dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
     </LinearLayout>

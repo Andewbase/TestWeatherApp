@@ -40,4 +40,7 @@
     <string name="type_of_season">Средняя температура за :</string>
     <string name="the_city_has_not_been">Город ещё не добавлен</string>
     <string name="season_size">Количество добавленных сезонов:</string>
+    <string name="city_name_is_empty">"Заполинте графу имя города!"</string>
+    <string name="season_name_is_empty">"Выберите сезон"</string>
+    <string name="temperature_is_empty">"Установите температуру"</string>
 </resources>

@@ -27,9 +27,9 @@ data class Spring(
     val nameMarch: String = "Март",
     val nameApril: String = "Апрель",
     val nameMay: String = "Май",
-    val temperatureMonthOne: Double? = null,
-    val temperatureMonthTwo: Double? = null,
-    val temperatureMonthThree: Double? = null
+    val temperatureMarch: Double? = null,
+    val temperatureApril: Double? = null,
+    val temperatureMay: Double? = null
 )
 
 data class Summer(
@@ -37,9 +37,9 @@ data class Summer(
     val nameJune: String = "Июнь",
     val nameJuly: String = "Июль",
     val nameAugust: String = "Август",
-    val temperatureMonthOne: Double? = null,
-    val temperatureMonthTwo: Double? = null,
-    val temperatureMonthThree: Double? = null
+    val temperatureJune: Double? = null,
+    val temperatureJuly: Double? = null,
+    val temperatureAugust: Double? = null
 )
 
 data class Autumn(
@@ -47,9 +47,9 @@ data class Autumn(
     val nameSeptember: String = "Сентябрь",
     val nameOctober: String = "Октябрь",
     val nameNovember: String = "Ноябрь",
-    val temperatureMonthOne: Double? = null,
-    val temperatureMonthTwo: Double? = null,
-    val temperatureMonthThree: Double? = null
+    val temperatureSeptember: Double? = null,
+    val temperatureOctober: Double? = null,
+    val temperatureNovember: Double? = null
 )
 
 data class Winter(
@@ -57,8 +57,8 @@ data class Winter(
     val nameDecember: String = "Декабрь",
     val nameJanuary: String = "Январь",
     val nameFebruary: String = "Февраль",
-    val temperatureMonthOne: Double? = null,
-    val temperatureMonthTwo: Double? = null,
-    val temperatureMonthThree: Double? = null
+    val temperatureDecember: Double? = null,
+    val temperatureJanuary: Double? = null,
+    val temperatureFebruary: Double? = null
 )
 

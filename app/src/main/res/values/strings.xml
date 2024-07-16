@@ -3,4 +3,6 @@
     <string name="main">Main</string>
     <string name="settings">Settings</string>
     <string name="settings_dialog">SettingsDialog</string>
+    <string name="add_name_city">Введите название города</string>
+    <string name="type_city">Тип Города:</string>
 </resources>
